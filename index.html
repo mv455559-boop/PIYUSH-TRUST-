@@ -1,0 +1,557 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Piyush Trust — Landing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- 🔵 Facebook Meta Pixel -->
+
+<script>
+
+!function(f,b,e,v,n,t,s){
+
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+
+t=b.createElement(e);t.async=!0;t.src=v;
+
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '6799999999444'); // Your Pixel ID
+
+fbq('track', 'PageView');
+
+</script>
+
+<noscript>
+
+<img height="1" width="1" style="display:none"
+
+src="https://www.facebook.com/tr?id=6799999999444&ev=PageView&noscript=1"/>
+
+</noscript>
+
+<style>
+
+:root{
+
+--bg-1: #071226;
+
+--muted: #bcd3e6;
+
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{
+
+margin:0;
+
+font-family:"Poppins",sans-serif;
+
+background: linear-gradient(180deg,#071226 0%, #042033 100%);
+
+color:#eaf4ff;
+
+display:flex;
+
+align-items:flex-start;
+
+justify-content:center;
+
+padding:28px 16px;
+
+}
+
+.page {
+
+width:100%;
+
+max-width:520px;
+
+background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.02));
+
+padding: 28px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.03);
+
+box-shadow:0 20px 50px rgba(3,8,22,0.7);
+
+}
+
+/* ---------- Notification ---------- */
+
+.notif{
+
+position:fixed;
+
+top:-140px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:min(560px,92%);
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:12px 16px;
+
+border-radius:14px;
+
+background:rgba(8,14,20,0.9);
+
+box-shadow:0 14px 40px rgba(2,8,20,0.7);
+
+border:1px solid rgba(255,255,255,0.05);
+
+backdrop-filter:blur(8px) saturate(120%);
+
+z-index:999;
+
+opacity:0;
+
+transition:top .5s ease, opacity .5s ease;
+
+}
+
+.notif.show{
+
+opacity:1;
+
+top:18px;
+
+}
+
+.avatar{
+
+width:52px;
+
+height:52px;
+
+border-radius:50%;
+
+font-weight:700;
+
+font-size:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#fff;
+
+animation: pulseAvatar 2s infinite;
+
+}
+
+@keyframes pulseAvatar{
+
+0%,100%{transform: scale(1);}
+
+50%{transform: scale(1.1);}
+
+}
+
+.notif-text{
+
+font-size:14px;
+
+}
+
+.notif-text .join{
+
+color:#00ff6a;
+
+font-weight:700;
+
+}
+
+/* ---------- Logo & Title ---------- */
+
+.logo-img{
+
+width:110px;
+
+height:110px;
+
+border-radius:18px;
+
+object-fit:cover;
+
+box-shadow:0 10px 32px rgba(0,0,0,0.6);
+
+display:block;
+
+margin:0 auto 10px;
+
+}
+
+.title{
+
+font-weight:700;
+
+font-size:20px;
+
+color:#fff;
+
+margin:10px 0 18px;
+
+text-align:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:6px;
+
+}
+
+.verified{
+
+font-size:18px;
+
+color:#00aaff;
+
+}
+
+/* ---------- CTA Button ---------- */
+
+.cta{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+background:linear-gradient(180deg,#5fb9ff,#2da6ff);
+
+padding:14px 24px;
+
+border-radius:16px;
+
+font-weight:800;
+
+color:#042133;
+
+text-decoration:none;
+
+margin:14px auto 30px;
+
+box-shadow:0 12px 26px rgba(45,166,255,0.25);
+
+width:max-content;
+
+animation: pulse 2s infinite;
+
+transition: transform 0.2s;
+
+}
+
+.cta:hover{
+
+transform: scale(1.05);
+
+}
+
+@keyframes pulse{
+
+0%,100%{box-shadow:0 12px 26px rgba(45,166,255,0.25);}
+
+50%{box-shadow:0 12px 40px rgba(45,166,255,0.45);}
+
+}
+
+.icon{
+
+width:26px;
+
+height:26px;
+
+border-radius:6px;
+
+background:#fff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:800;
+
+}
+
+/* ---------- Feedback ---------- */
+
+.feedback-wrap{
+
+background:rgba(255,255,255,0.02);
+
+padding:18px;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.02);
+
+}
+
+.fb-card{
+
+position:relative;
+
+padding:18px 20px;
+
+border-radius:16px;
+
+margin-bottom:14px;
+
+background:rgba(255,255,255,0.02);
+
+}
+
+.fb-card::before{
+
+content:'';
+
+position:absolute;
+
+left:-6px;
+
+top:8px;
+
+bottom:8px;
+
+width:6px;
+
+background:linear-gradient(#00aaff,#0087d1);
+
+border-radius:12px;
+
+}
+
+.name{
+
+font-weight:700;
+
+font-size:16px;
+
+margin-bottom:6px;
+
+}
+
+.text{
+
+color:#cfe8ff;
+
+font-size:14px;
+
+}
+
+.footer{
+
+text-align:center;
+
+margin-top:25px;
+
+font-size:12px;
+
+color:#9fb7cc;
+
+opacity:0.8;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔔 Floating Notification -->
+
+<div id="notif" class="notif">
+
+<div class="avatar" id="notifAvatar">R</div>
+
+<div class="notif-text" id="notifText">
+
+<span class="notif-name" id="notifName">Rekha</span> <span class="join">Join</span> just now
+
+</div>
+
+</div>
+
+<main class="page">
+
+<img class="logo-img" src="https://i.ibb.co/JwqRBGhh/IMG-20251110-131916-556.jpg" alt="Logo">
+
+<div class="title">
+
+PIYUSH TRUST OFFICIAL
+
+<span class="verified">✔</span>
+
+</div>
+
+<a class="cta" id="joinBtn" href="https://t.me/+EUsykxAafKE5NmQ1" target="_blank">
+
+<span class="icon">✈</span>
+
+JOIN TELEGRAM CHANNEL 
+
+</a>
+
+<div class="feedback-wrap">
+
+<div class="fb-card">
+
+<div class="name">Rahul Patel</div>
+
+<div class="text">Amazing service, totally satisfied!</div>
+
+</div>
+
+<div class="fb-card">
+
+<div class="name">Rohit Verma</div>
+
+<div class="text">So friendly person, super supportive!</div>
+
+</div>
+
+<div class="fb-card">
+
+<div class="name">Ankit Kumar Singh</div>
+
+<div class="text">Trusted account guys 💯</div>
+
+</div>
+
+<div class="fb-card">
+
+<div class="name">Anupama Singh</div>
+
+<div class="text">Fast response & very helpful!</div>
+
+</div>
+
+<div class="fb-card">
+
+<div class="name">Ramesh Nagar</div>
+
+<div class="text">Excellent experience. Must recommended!</div>
+
+</div>
+
+</div>
+
+<div class="footer">© 2025 Piyush Trust — All Rights Reserved</div>
+
+</main>
+
+<script>
+
+const names = ["Rekha","Rohit","Amit","Sneha","Piyush","Meena","Kunal","Riya","Ankit","Vikash","Nisha","Aman"];
+
+let i = 0;
+
+const notif = document.getElementById("notif");
+
+const notifText = document.getElementById("notifText");
+
+const notifName = document.getElementById("notifName");
+
+const notifAvatar = document.getElementById("notifAvatar");
+
+function randomGradient(name){
+
+const colors = [
+
+["#ff6b6b","#ffb86b"],
+
+["#6bffb8","#6bfff4"],
+
+["#6b83ff","#b86bff"],
+
+["#ff6bde","#ff6b6b"],
+
+["#00c6ff","#0072ff"],
+
+["#00ff6a","#00c100"]
+
+];
+
+const index = name.charCodeAt(0) % colors.length;
+
+return `linear-gradient(135deg, ${colors[index][0]}, ${colors[index][1]})`;
+
+}
+
+function nextNotif(){
+
+const name = names[i % names.length];
+
+i++;
+
+notifName.textContent = name;
+
+notifAvatar.textContent = name.charAt(0).toUpperCase();
+
+notifAvatar.style.background = randomGradient(name);
+
+notifText.innerHTML = `<span class="notif-name">${name}</span> <span class="join">Join</span> just now`;
+
+notif.classList.add("show");
+
+setTimeout(()=> notif.classList.remove("show"), 2200);
+
+}
+
+setTimeout(nextNotif,800);
+
+setInterval(nextNotif,3300);
+
+const joinBtn = document.getElementById("joinBtn");
+
+joinBtn.addEventListener("click",()=>{
+
+fbq('track','Subscribe',{value:5,currency:'INR'});
+
+console.log("Join button clicked!");
+
+});
+
+</script>
+
+</body>
+
+</html>
